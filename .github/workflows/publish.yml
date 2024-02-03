@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
       - run: pnpm run lint && pnpm run build
 
   publish-gpr:
@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
       - run: pnpm run lint && pnpm run build
         env:
           NODE_AUTH_TOKEN: ${{secrets.PACKAGE_TOKEN}}
