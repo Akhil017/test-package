@@ -19,6 +19,6 @@
         "url": "https://github.com/Akhil017/test-package.git"
     },
     "publishConfig": {
-        "registry": ""
+        "@akhil017:registry": "https://npm.pkg.github.com"
     }
 }
